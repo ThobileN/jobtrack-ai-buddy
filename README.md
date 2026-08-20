@@ -1,29 +1,89 @@
-# Welcome to your Lovable project
+# JobTrack
 
-This project was built with [Lovable](https://lovable.dev).
+A modern, responsive web application that helps job seekers manage their job applications and workplace productivity. JobTrack combines a clean SaaS dashboard with AI-powered tools to streamline the job search process.
 
-## Build with Lovable
+![JobTrack](https://jobtrack-ai-buddy.lovable.app)
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+## Features
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Job Application Tracker** — Add, edit, delete, search, and filter job applications by status (Applied, Interview, Offer, Rejected, Withdrawn).
+- **Smart Email Generator** — Generate professional emails in Formal, Friendly, or Persuasive tones, then edit the draft inline.
+- **AI Task Planner** — Turn job-search goals into prioritized daily or weekly task lists (P1–P3) with editable checkboxes.
+- **AI Assistant** — Ask a job-search and productivity-focused chatbot for advice on resumes, interviews, and applications.
+- **Dark Mode First** — Built with a polished dark UI and full light/dark theme toggle.
+- **Responsive Dashboard** — Sidebar navigation with a mobile-friendly layout.
 
-## Development
+## Tech Stack
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+- [TanStack Start](https://tanstack.com/start) — Full-stack React framework
+- [React 19](https://react.dev) — UI library
+- [TypeScript](https://www.typescriptlang.org) — Type safety
+- [Tailwind CSS v4](https://tailwindcss.com) — Styling
+- [shadcn/ui](https://ui.shadcn.com) — UI components
+- [Lovable AI Gateway](https://docs.lovable.dev/features/ai-gateway) — AI completions
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- npm or bun
+
+### Install dependencies
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
+```
+
+### Run the development server
+
+```sh
 npm run dev
 ```
 
-## Built with
+The app will be available at `http://localhost:8080`.
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+### Build for production
+
+```sh
+npm run build
+```
+
+### Lint and format
+
+```sh
+npm run lint
+npm run format
+```
+
+## Project Structure
+
+```
+src/
+  components/        # Shared UI components (AppShell, ThemeToggle, AiDisclaimer, etc.)
+  lib/               # Business logic, storage hooks, and AI server functions
+  routes/            # TanStack file-based routes
+  styles.css         # Global design tokens and Tailwind theme
+```
+
+## AI Features
+
+JobTrack uses the Lovable AI Gateway with `google/gemini-3.7-flash` for:
+
+- Email drafting
+- Task planning
+- Chat assistance
+
+AI-generated content is always editable before you use it.
+
+## Data Storage
+
+Application and task data is stored in the browser's `localStorage`. No backend database or authentication is required for the core experience.
+
+## Responsible AI
+
+JobTrack includes an AI disclaimer reminding users to review and verify all AI-generated content before sending or acting on it.
+
+## License
+
+This project is built and owned by you through [Lovable](https://lovable.dev). Feel free to modify and deploy it as you wish.
